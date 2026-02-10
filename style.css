@@ -229,6 +229,7 @@ h1 {
 /*CARDS*/
 .cat-gallery {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     margin-top: 40px;
