@@ -37,6 +37,7 @@ ul li::marker {
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 
