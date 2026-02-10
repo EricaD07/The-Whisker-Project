@@ -40,6 +40,7 @@ ul li::marker {
     display: flex;
     align-items: center;
     justify-content: center;
+    white-space: nowrap; /*AI-assisted: how to stop text from wrapping*/
 
     background-color: rgb(255, 105, 0);
     color: white;
@@ -460,7 +461,7 @@ h1 {
     font-size: 13px;
     color: rgb(120, 120, 120);
     margin: 15px auto 25px;
-    text-align: center;
+    text-align: left;
 }
 
 
