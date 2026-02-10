@@ -37,7 +37,7 @@ ul li::marker {
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -230,6 +230,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
+    margin-top: 40px;
 }
 .cat-card {
     background: rgb(255, 254, 249);
@@ -325,10 +326,13 @@ h1 {
     margin-top: 50px;
 }
 .steps-bottom p {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
-
+.steps-bottom .button {
+    display: inline-flex;
+    margin: 10px auto 0;
+}
 
 
 
@@ -455,7 +459,8 @@ h1 {
 .nonprofit-text {
     font-size: 13px;
     color: rgb(120, 120, 120);
-    margin-top: 35px;
+    margin: 15px auto 25px;
+    text-align: center;
 }
 
 
