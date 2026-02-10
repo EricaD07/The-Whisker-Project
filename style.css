@@ -1,0 +1,855 @@
+
+  /*********  font ****************/
+@font-face{
+    font-family: 'OpenSans';
+    src: url('OpenSans-VariableFont_wdth,wght.ttf');
+}  
+  /********* Universal ****************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'OpenSans';
+}
+h2 {
+    font-size: 50px;
+    color: rgb(16, 24, 40);
+    line-height: 2;
+    text-align: center;
+}
+main section:not(.hero) h2 + p {   /*AI-Assisted: Explained how to target only the <p> without a class under the h2 */
+    text-align: center;
+    color: rgb(74, 85, 101);
+    margin-bottom: 20px;
+}
+ul li::marker {
+     color: orange;
+}
+.desc {
+    font-size: 15px;
+    color: rgb(74, 85, 101);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.button {
+    padding: 15px 30px;
+    border-radius: 900px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(255, 105, 0);
+    color: white;
+}
+
+.button:hover {
+    background-color: rgb(228, 61, 0);
+    box-shadow: 0 5px 5px rgb(0,0,0,0.1);
+}
+
+
+/************************
+     LANDING PAGE
+*************************/
+
+
+/********* NAV ****************/
+.navbar img {
+    width: 45px;   
+    height: auto;
+}
+h1 {
+    color: rgb(16, 24, 40);
+    font-size: 22px;
+    font-weight: bold;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;  
+    padding: 15px 165px;    
+    background-color: rgb(255, 254, 249);
+    /*AI-assisted: How to make it fixed (regarding top and z-index, and using box shadow values*/
+    box-shadow: 0 2px 5px rgb(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;       
+    padding: 0;  
+    gap: 30px;
+    align-items: center;
+}
+.navbar a {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(74, 85, 101);
+}
+.navbar a:hover {
+    color: rgb(255, 105, 0);
+}
+/* Contact Us Button */
+.navbar ul li:last-child a {
+    color: white;
+    background-color: rgb(255, 105, 0);
+    padding: 11px 20px;
+    border-radius: 40px;
+}
+.navbar ul li:last-child a:hover {
+    background-color: rgb(228, 61, 0);
+}
+
+
+
+
+/***********HERO SECTION*************************/
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+    padding: 115px 165px;
+    background-color:rgb(255, 247, 237);
+}
+ /* LEFT*/
+.hero-content h2{
+    font-size: 65px;
+    margin: 20px 0;
+    color: rgb(16, 24, 40);
+    font-weight:400;
+    line-height:65px;
+    text-align: left;
+}
+.hero-content p {
+    color:rgb(74, 85, 101);
+    font-size: 20px;
+    line-height:32px;
+}
+.hero-content .slogan{
+    display: inline-block; /*AI-Assisted*/
+    background-color:rgb(255, 237, 212);
+    color: rgb(202, 53, 0);
+    padding: 5px 16px;
+    border-radius: 900px;
+    font-size: 14px;
+    font-weight: 600;
+} 
+/*buttons***/
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hero-buttons a:hover {
+    box-shadow: 0px 10px 15px rgb(0,0,0,0.2); 
+    transform: translateY(-2px); /*AI-Assisted for lift effect */
+    transition: all 0.3s ease;
+}
+.hero-buttons a:first-child:hover {
+    background-color: rgb(228, 61, 0);
+    box-shadow: 0px 10px 15px rgb(0,0,0,0.2); 
+}
+
+.hero-buttons a {
+    padding: 19px 38px;
+    border-radius: 900px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 19px;
+}
+    .hero-buttons a:first-child {
+        background: rgb(255, 105, 0);
+        color: white;
+        box-shadow: 0 5px 5px rgb(0,0,0,0.1);
+    }
+    .hero-buttons a:last-child {
+        background: rgb(255, 251, 251);
+        border: 2px solid rgb(220, 220, 220);
+        color: rgb(16, 24, 40);
+    }
+ /* RIGHT*/
+.hero-cat {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.hero-cat img {
+    width: 480px;
+    height: auto;
+    border-radius: 900px;
+    border: 10px solid #ffe9d6;
+    box-shadow: 0 10px 10px rgb(0,0,0,0.1);
+}
+
+.box {
+    position: absolute; /*AI-Assisted: For box's positioning*/
+    background: white;
+    padding: 15px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    color: rgb(74, 85, 101);
+}
+.box-left {
+    top: 30px;
+    right: 20px;
+}
+.box-right {
+    bottom: 30px;
+    left: 20px;
+}
+.box-number {
+    color: rgb(255, 105, 0);
+    font-size: 40px;
+    font-weight: 650;     
+}
+
+
+
+
+
+
+/***********ADOPTION SECTION*************************/
+#Adopt {
+    padding: 100px 165px;
+    background-color: rgb(255, 254, 249);
+    text-align: center;
+}
+/*CARDS*/
+.cat-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+.cat-card {
+    background: rgb(255, 254, 249);
+    border-radius: 16px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+}
+.cat-card img {
+    width: 100%; /*AI-Assisted: To fix image sizing/scaling*/
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+.cat-card .button {
+    align-self: center;
+    padding: 15px 130px;
+}
+
+/*INFO*/
+.cat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+.cat-header h3 {
+    font-size: 23px;
+    font-weight: 600;
+    color: rgb(16, 24, 40);
+}
+.age {
+    color: rgb(255, 105, 0);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+
+
+
+
+/*******HOW IT WORKS***********/
+#How-it-Works {
+    padding: 100px 165px;
+    background: linear-gradient(
+        to bottom,           /* AI assisted: Explained how to create a gradient background*/
+        rgb(255, 247, 237),  
+        #ffffff    );      
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    justify-items: center;
+    padding-top: 50px;
+}
+
+.step-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    max-width: 300px;
+}
+.step-card h3 {
+    margin-top: 15px;
+    line-height: 2;
+}
+.step-card:hover {
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.25);
+}
+
+.step-number {
+    display: flex;    
+    align-items: center;
+    justify-content: center;    
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(255, 105, 0);
+    color: white;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 900px;
+}
+.steps-bottom {
+    text-align: center;
+    margin-top: 50px;
+}
+.steps-bottom p {
+    margin-bottom: 40px;
+}
+
+
+
+
+
+/****************TIPS***********/
+#Pet-Care{
+    padding: 100px 165px;
+    background-color: white;
+}
+
+.Advice {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    justify-items: center;
+    padding-top: 50px;
+}
+.advice-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    max-width: 300px;
+    text-align: left;
+}
+
+.advice-card:hover {
+    border: 3px solid rgb(255, 237, 212); 
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.advice-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.more-help {
+    grid-column: 1 / -1; 
+    background-color: rgb(255, 247, 237);
+    border-radius: 15px;
+    padding: 30px 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.more-help h4 {
+    margin-bottom: 20px; 
+}
+
+.more-help .desc {
+    margin-bottom: 30px;  
+    max-width: 700px;
+}
+/****************DONATION***********/
+#Donate {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;   
+    height:650px;
+    overflow: hidden; /*AI-Assisted: Recommened to add this due to an issue of corners not rounding*/
+    margin: 100px auto; 
+    border-radius: 30px;
+    box-shadow: 10px 10px 40px 10px rgb(0,0,0,0.15);
+}
+/* LEFT SIDE */
+.donation-left {
+    background: white;
+    padding: 60px;
+}
+
+.slogan {
+    display: inline-block; 
+    background-color:rgb(255, 237, 212);
+    color: rgb(202, 53, 0);
+    padding: 5px 16px;
+    border-radius: 900px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.donation-left h2 {
+    text-align: left;
+    line-height: 1.2;
+    font-size:35px;  
+    margin-top: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.donation-left .desc {
+    text-align: left;
+    font-size: 17px;
+}
+
+.donation-list li {
+    margin-bottom: 15px;
+    color: rgb(16, 24, 40);
+}
+
+/*DON OPTIONS*/
+.donation-buttons { 
+    display: flex;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.donation-buttons button { 
+    padding: 15px 30px;
+    border-radius: 900px;
+    background-color: #f1f1f1;
+    font-weight: 600;
+    cursor: pointer;
+    border: none
+}
+.donation-left a {
+    font-size: 18px;
+}
+.donation-buttons button:hover {
+    background-color: rgb(220, 220, 220);
+}
+#Donate .button {
+    padding: 16px 70px; 
+}
+.nonprofit-text {
+    font-size: 13px;
+    color: rgb(120, 120, 120);
+    margin-top: 35px;
+}
+
+
+/*********RIGHT**********/
+.donation-right {
+    background-color: rgb(255, 143, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    text-align: center;
+}
+
+.donation-right p {
+    color: white;
+}
+
+.heart {
+    font-size: 125px;
+    margin-bottom: 20px;
+}
+
+.rescued-number {
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.rescued-text {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.donation-right hr {
+    width: 60px;
+    border: 1px solid rgb(255, 247, 237);
+    margin-bottom: 25px;
+}
+
+.thanks-text {
+    max-width: 260px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+
+
+/****************FOOTER***********/
+.footer {
+    background-color: rgb(16, 24, 40); 
+    color: white;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px 165px;
+    gap: 20px;
+}
+.footer-column {
+    text-align: left;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: rgb(234, 234, 234);
+}
+.footer-column h4 {
+    margin-bottom: 20px;
+    color: rgb(234, 234, 234);
+}
+
+.footer-column ul {
+    list-style: none;
+}
+.footer-column li {
+    margin-bottom: 12px;
+    color: rgb(160, 170, 180);
+}
+.footer-column a {
+    color: rgb(160, 170, 180);
+    text-decoration: none;
+}
+.footer-column p {   /*AI assisted: Solved my problem why this text was applying color to all <p> */
+    color: rgb(160, 170, 180);
+}
+
+.footer-column a:hover {
+    color: rgb(255, 143, 0);
+}
+
+/*socials**/
+.socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.socials img {
+    width: 70px;
+    height: 70px;
+}
+
+/*BOTTOM*********/
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1); /*AI-assisted: Explained how to create subtle line*/
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 165px;
+    font-size: 13px;
+    color: rgb(160, 170, 180);
+}
+
+.footer-bottom a {
+    color: rgb(160, 170, 180);
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+/************************
+    PET CARE TIPS PAGE
+*************************/
+.care-header {
+    background-color: rgb(255, 247, 237);
+    padding: 120px 165px 90px;
+    text-align: center;
+}
+
+.care-header h2 {
+    font-size: 52px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.care-header p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: rgb(74, 85, 101);
+    line-height: 1.6;
+}
+.care-header hr {
+    width: 600px;
+    border: 1px solid rgb(255, 143, 0);
+    margin-bottom: 25px;
+    margin: 0 auto 25px;
+}
+
+/*CARDS*/
+.care {
+    padding: 70px 165px;
+}
+.care-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: 16px;
+}
+
+.care-card {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    border: solid rgb(255, 237, 212);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.care-card:hover{
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.care-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.care-card h3 {
+    font-size: 28px;
+    background-color: rgb(240, 240, 240);
+    padding: 14px 24px;
+    border-radius: 20px;
+ 
+}
+
+.care-card p {
+    margin-top: 0;
+    line-height: 1.7;
+}
+.care-card ul {
+    margin-top: 0;
+    padding-left: 20px;
+}
+.care-card li {
+    margin-bottom: 8px;
+}
+
+
+/* AI-Assisted: To alternate text and images in the cards */
+.care:nth-of-type(even) .care-card {
+    grid-template-columns: 1fr 1.5fr;
+}
+.care:nth-of-type(even) .care-text {
+    order: 2;
+}
+.care:nth-of-type(even) img {
+     order: 1;
+}
+
+/*Download section*/
+.Download {
+    background-color: rgb(255, 247, 237);
+    padding: 90px 165px;
+    text-align: center;
+}
+
+.Download h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.Download p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: rgb(74, 85, 101);
+}
+.Download button{
+    border: none;
+}
+
+
+
+
+
+/************************
+    CONTACT PAGE
+*************************/
+
+.contact-text {
+    background-color: rgb(255, 247, 237);
+    padding: 120px 165px 90px;
+    border-bottom: solid rgb(255, 195, 116);
+}
+
+.contact-text-inner{
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contact-text h2 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: rgb(16, 24, 40);
+}
+
+.contact-text h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(255, 143, 0);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.contact-text p {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 20px;
+    border: solid rgb(220, 220, 220);
+    text-align: center;
+}
+
+
+/* FORM SECTION */ 
+.form-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px 80px;
+}
+
+.form-section .card {
+    background: rgb(255, 251, 251);
+    padding: 40px;
+    border-radius: 24px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 12px 15px 5px rgba(0, 0, 0, 0.08);
+}
+
+
+.form-section h3 {
+    font-size: 26px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.form-section p {
+    font-size: 15px;
+    color: #667085;
+    margin-bottom: 28px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(16, 24, 40);
+}
+
+input, select, textarea {
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid #d0d5dd;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: rgb(255, 105, 0);
+    box-shadow: 0 0 2px 1px rgba(255, 105, 0);
+}
+
+label input [type="checkbox"]{
+    margin-right: 10px;  
+}
+
+.card button {
+    border: none
+}
+
+
+/********************
+RESPONSIVENESS
+********************/
+
+@media (max-width: 1024px) { /* AI-Assisted: for @media set up */
+
+ .navbar {
+        padding: 15px 50px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+ .navbar ul {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+/*** Hero section becomes vertical*/
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 100px 50px;
+        text-align: center;
+    }
+    .hero-cat img {
+        margin: 30px auto 0;
+        border-radius: 20px;
+    }
+  
+    /*content*/
+    .cat-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* AI-Assisted: for  auto-adjust columns*/
+        gap: 30px;
+    }
+    .Advice {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+    }
+    #Donate {
+        grid-template-columns: 1fr;
+        padding: 50px;
+    }
+    /*page 2*/
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-top: 30px;
+    }
+}
