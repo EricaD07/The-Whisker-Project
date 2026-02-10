@@ -37,5 +37,5 @@ CSS Related
 Misc.
 - Learned to add backticks around code in README files, otherwise it may not display properly.
 
-##Note
+## Note
 Was not able to solve this issue: The text "Learn More" for the buttons in the cat gallery are stacked on Github's live site, but appears fine on live server opened via VScode
