@@ -6,7 +6,7 @@ Erica Dionne
 This site is for The Whisker Project, a non-profit (ficitonal) cat rescue organization dedicated to rescuing stray and abandoned cats and finding them loving homes. The purpose of the website is to offer a trustworthy and easy-to-use adoption platform where users can browse available cats with descriptions, understand the adoption process, and submit applications easily. The site also supports the organization by encouraging small donations and educating users on cat ownership.
 
 ## Design Changes from Assignment 1
-- Moved the “Download Care Guide” onto a separate "Pet Care Tips" page, and replaced it with a "Learn More" button on the landing page. 
+- Moved the “Download Care Guide” onto a separate "Pet Care Tips" page, and replaced it with a "Learn More" button on the landing page. Makes more sense as there is now a page specifically for Pet Care Tips.
 - Removed the word “Available” in cat cards and replaced with the price (as taken from feedback from user research)
 - Increased overall sizing of sections and cards to fill the screen better.  
 - Replaced icons in the “How It Works” steps with numbers for clarity.  
