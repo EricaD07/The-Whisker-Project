@@ -32,10 +32,10 @@ CSS Related
 - Created a subtle divider line using `border-top`.
 - Alternated and reordered text and images in cards using CSS grid with `:nth-of-type(even)`.
 - Learned responsive card layout using `grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))`.
-- Applied responsive design rules for different screen sizes using `@media (max-width: 1024px)`.
+- Used for sizing media queries when attempting to apply responsive design  `@media (max-width: 1024px)`.
 
 Misc.
 - Learned to add backticks around code in README files, otherwise it may not display properly.
 
 ## Note
-Was not able to solve this issue: Everything slightly bigger on Github's live site and has small changes, but appears fine on live server opened via VScode
+Was not able to solve this issue: Everything slightly bigger on Github's live site and has slight changes, but appears fine on live server opened via VScode
