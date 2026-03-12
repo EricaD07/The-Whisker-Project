@@ -12,16 +12,31 @@
 <header>
 <!------------------NAVIGATION--------------->
    <nav class="navbar">
-        <a href="index.html"> <img src="logo.png" alt="logo">
-        <h1>The Whisker Project</h1>
-        </a> 
-    <ul>
-        <li><a href="index.html#Adopt">Adopt</a></li>
-        <li><a href="index.html#How-it-Works">How it Works</a></li>
-        <li><a href="Pet_Care.html">Pet Care Tips</a></li>
-        <li><a href="index.html#Donate">Donate</a></li>
-        <li><a href="contact_us.html">Contact Us</a></li>
-    </ul>
+        <a href="index.html"> 
+            <img src="logo.png" alt ="logo"><h1>The Whisker Project</h1></a> 
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html#Adopt" >Adopt</a></li>
+
+            <li class="nav-item">
+                <a href="index.html#How-it-Works">How it Works</a></li>
+
+            <li class="nav-item">
+                <a href="Pet_Care.html">Pet Care Tips</a></li>
+
+            <li class="nav-item">
+                <a href="index.html#Donate">Donate</a></li>
+
+            <li class="nav-item">
+                <a href="contact_us.html">Contact Us</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
    </nav>
 </header>
 
@@ -46,57 +61,64 @@
         <h3>Adoption & General Inquiries </h3>
         <p>Please provide your contact information and let us know how we can help. All fields are required unless stated otherwise.</p>
 
-        <form action="#" method="post">
+        <form id="contact-form" action="#" method="post">
 
             <label for="full-name">Full Name</label>
             <input
                 type="text"
                 id="full-name"
                 name="full-name"
-                required>
+                >
+            <span id="name-error" class="error"></span>
 
             <label for="email">Email Address</label>
             <input
             type="email"
             id="email"
             name="email"
-            required>
+            >
+            <span id="email-error" class="error"></span>            
 
             <label for="phone">Phone Number</label>
             <input
                 type="tel"
                 id="phone"
                 name="phone">
+            <span id="phone-error" class="error"></span>
 
           <!---------------AI-Assisted: Explained how to have dropdown options--------------->
             <label for="reason">Reason for Contact</label>
             <select 
             id="reason" 
             name="reason" 
-            required>
+            >
                 <option value="">Select an option</option>
                 <option value="Adoption">Adoption Inquiry</option>
                 <option value="Volunteer">Volunteering</option>
                 <option value="Donation">Donation Question</option>
                 <option value="General">General Question</option>
             </select>
+                <span id="reason-error" class="error"></span>
+
 
             <label for="message">Optional Message</label>
             <textarea
                 id="message"
                 name="message"
                 rows="5"
-                required
                 minlength="10"
                 maxlength="550"
             ></textarea>
             
             <label class="agreement">
-            <input type="checkbox" name="agreement">
-            If adopting, I confirm that I am at least 18 years old and understand that adopting a cat is a long-term commitment.
+                <input type="checkbox" id="agreement" name="agreement">
+                If adopting, I confirm that I am at least 18 years old and understand that adopting a cat is a long-term commitment.
             </label>
 
-            <button class=button type= "submit">Submit </button>
+            <button class="button" type= "submit">Submit </button>
+
+            <p id="success-message"></p>
+
         </form>
         </div>
     
@@ -162,6 +184,11 @@
         </div>
     </div>
 </footer>
+
+<!-- Back to top -->
+<button id="back-to-top">↑</button>
+
+<script src="file.js"></script>
 
 </body>
 </html>
