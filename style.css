@@ -37,9 +37,10 @@ ul li::marker {
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
 
     background-color: rgb(255, 105, 0);
     color: white;
@@ -79,6 +80,32 @@ h1 {
     top: 0;
     z-index: 1000;
 }
+
+.nav-menu{
+   display: flex; 
+   justify-content: space-between;
+   align-items: center;
+   gap: 60px
+}
+
+.nav-link {
+    transition: 0.7s;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: rgb(255, 105, 0);
+}
+
+
 .navbar ul {
     display: flex;
     list-style: none;
@@ -107,6 +134,7 @@ h1 {
 .navbar ul li:last-child a:hover {
     background-color: rgb(228, 61, 0);
 }
+
 
 
 
@@ -228,6 +256,7 @@ h1 {
 /*CARDS*/
 .cat-gallery {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     margin-top: 40px;
@@ -272,7 +301,41 @@ h1 {
     margin-bottom: 8px;
 }
 
+/* Filter buttons container */
+.filter-buttons {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10px;
+}
 
+/* Filter buttons */
+.filter-btn {
+    padding: 8px 16px;
+    background-color: rgb(255, 143, 0);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.filter-btn:hover {
+    background-color: rgb(228, 61, 0);
+}
+.filter-btn.active {
+    background-color: rgb(255, 105, 0);
+}
+
+/* Search bar */
+#search-cats {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(220, 220, 220);
+    font-size: 1rem;
+}
 
 
 
@@ -388,6 +451,10 @@ h1 {
     margin-bottom: 30px;  
     max-width: 700px;
 }
+
+
+
+
 /****************DONATION***********/
 #Donate {
     display: grid;
@@ -461,7 +528,7 @@ h1 {
     font-size: 13px;
     color: rgb(120, 120, 120);
     margin: 15px auto 25px;
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -594,114 +661,117 @@ h1 {
 *************************/
 .care-header {
     background-color: rgb(255, 247, 237);
-    padding: 120px 165px 90px;
+    padding: 120px 10%;
     text-align: center;
 }
 
 .care-header h2 {
-    font-size: 52px;
+    font-size: 3rem; 
     font-weight: 400;
     margin-bottom: 20px;
 }
 
 .care-header p {
-    max-width: 800px;
+    max-width: 90%;
     margin: 0 auto;
     color: rgb(74, 85, 101);
     line-height: 1.6;
 }
 .care-header hr {
-    width: 600px;
+    width: 50%;
     border: 1px solid rgb(255, 143, 0);
-    margin-bottom: 25px;
     margin: 0 auto 25px;
 }
 
 /*CARDS*/
 .care {
-    padding: 70px 165px;
-}
-.care-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    gap: 16px;
+    padding: 70px 10%;
 }
 
-.care-card {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 40px;
-    align-items: center;
-    background: white;
-    border-radius: 20px;
-    padding: 40px;
-    border: solid rgb(255, 237, 212);
+/*accordion*/
+.accordion{
+    width: 80%;
+    margin: 0 auto;
+}
+.accordion-item{
+    margin-bottom: 20px;
+    border-radius: 20px;    
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
 }
-
-.care-card:hover{
-    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.1);
-}
-
-.care-card img {
+.accordion-content img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
+    max-width: 300px;  
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 12px;
 }
 
-.care-card h3 {
-    font-size: 28px;
-    background-color: rgb(240, 240, 240);
+.accordion-header {
+    font-size: 1.5rem;
+    background-color: rgb(255, 143, 0);
     padding: 14px 24px;
-    border-radius: 20px;
- 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;    
+    color: rgb(255, 248, 239);
+    cursor: pointer;
+}
+.accordion-content {
+    display: none; 
+    max-height: 0px;
+    transition: 0.5s ease;
+    padding: 10px;
+    overflow: hidden;
+    background-color: rgb(234, 234, 234);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.accordion-header:hover {
+    background-color: rgb(255, 105, 0);
+}
+.accordion-content.active{
+    display:block;
+    max-height: 1000px
 }
 
-.care-card p {
+.accordion-content p {
     margin-top: 0;
     line-height: 1.7;
 }
-.care-card ul {
+.accordion-content ul {
     margin-top: 0;
     padding-left: 20px;
 }
-.care-card li {
+.accordion-content li {
     margin-bottom: 8px;
 }
+.filter-btn.active {
+    background-color: rgb(228, 61, 0);
+    color: white;
+}
 
 
-/* AI-Assisted: To alternate text and images in the cards */
-.care:nth-of-type(even) .care-card {
-    grid-template-columns: 1fr 1.5fr;
-}
-.care:nth-of-type(even) .care-text {
-    order: 2;
-}
-.care:nth-of-type(even) img {
-     order: 1;
-}
 
 /*Download section*/
 .Download {
     background-color: rgb(255, 247, 237);
-    padding: 90px 165px;
+    padding: 90px 10%;
     text-align: center;
 }
 
 .Download h3 {
-    font-size: 32px;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
 .Download p {
-    max-width: 700px;
+    max-width: 90%;
     margin: 0 auto 30px;
     color: rgb(74, 85, 101);
 }
 .Download button{
     border: none;
+    padding: 10px 20px;
 }
 
 
@@ -789,6 +859,13 @@ label {
     color: rgb(16, 24, 40);
 }
 
+.agreement {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+}
+
 input, select, textarea {
     padding: 14px 16px;
     border-radius: 14px;
@@ -811,6 +888,47 @@ label input [type="checkbox"]{
     border: none
 }
 
+/**** For JS requests *****/
+
+/*** R2 ***/
+.error{
+    color:red;
+    font-size:14px;
+}
+#success-message{
+    color:rgb(255, 143, 0);
+    margin-top:10px;
+    font-size: 17px;
+}
+
+/*** R3 ***/
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 105, 0);
+    color: white;
+    font-size: 25px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none; 
+    transition: opacity 0.4s;
+}
+
+#back-to-top:hover {
+    background-color: rgb(228, 61, 0);
+}
+
+#back-to-top.active {
+    opacity: 1;
+    pointer-events: auto;
+}
 
 /********************
 RESPONSIVENESS
@@ -858,4 +976,42 @@ RESPONSIVENESS
         gap: 30px;
         padding-top: 30px;
     }
+
+}
+
+/* PHONES */
+@media (max-width: 768px) {
+    .hamburger{
+        display:block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity:0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position:fixed;
+        left: -100%;
+        top: 70px;
+        gap:0;
+        flex-direction: column;
+        background-color: rgb(255, 254, 249);
+        width:100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+
 }
