@@ -11,7 +11,6 @@ const navLinks = document.querySelectorAll(".nav-item a").forEach(n=> n.addEvent
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
     }))
-    //test comment
 
 
 // REQUEST 2:  Form Validation with Error Messages //
